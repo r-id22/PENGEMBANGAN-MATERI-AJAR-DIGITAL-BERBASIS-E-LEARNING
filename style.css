@@ -1,0 +1,57 @@
+/* Custom CSS styling untuk melengkapi Tailwind CSS */
+
+/* Smooth Transition All Elements */
+* {
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Custom Scrollbar untuk Evaluasi Jawaban */
+#review-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+#review-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 10px;
+}
+
+#review-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+#review-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Option Selected Radio State Styling */
+.option-btn {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.option-btn.selected {
+    border-color: #0284c7 !important; /* sky-600 */
+    background-color: #f0f9ff !important; /* sky-50 */
+}
+
+.option-btn.selected .option-badge {
+    background-color: #0284c7 !important;
+    color: #ffffff !important;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#question-container {
+    animation: fadeIn 0.3s ease-in-out;
+}
